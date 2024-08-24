@@ -85,13 +85,13 @@ public class AppConfig {
 	            @Override
 	            public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
 	                CorsConfiguration cfg = new CorsConfiguration();
-            		cfg.setAllowedOriginPatterns(Collections.singletonList("*")); // Allows all origins
-            		cfg.setAllowedMethods(Collections.singletonList("*")); // Allows all HTTP methods (GET, POST, PUT, DELETE, etc.)
-            		cfg.setAllowedHeaders(Collections.singletonList("*")); // Allows all headers
-            		cfg.setAllowCredentials(true); // Allows credentials
-            		cfg.setExposedHeaders(Arrays.asList("Authorization")); // Exposes the "Authorization" header
-            		cfg.setMaxAge(3600L); // Cache duration for preflight requests
-            		return cfg;
+	                cfg.setAllowedOriginPatterns(Collections.singletonList("*"));
+	                cfg.setAllowedMethods(Collections.singletonList("*"));
+	                cfg.setAllowCredentials(true);
+	                cfg.setAllowedHeaders(Collections.singletonList("*"));
+	                cfg.setExposedHeaders(Arrays.asList("Authorization"));
+	                cfg.setMaxAge(3600L);
+	                return cfg;
 	            }
 	        };
 	    }
